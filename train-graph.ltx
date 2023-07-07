@@ -65,13 +65,15 @@
 	\node[st, above=of mog] (ino) {Inowrocław};
 	\node[st, above left=of ino] (byd) {Bydgoszcz Główna};
 	\node[st, above right=of ino] (tor) {Toruń Kluczyki};
+	\node[st, node distance=3.6cm, right=of tor] (tgl) {Toruń Główny};
 
 	\draw[line width=.125cm] (pws) -- (gni) node[pol] {25};
 	\draw[line width=.065cm] (gni) -- (mog) node[pol] {13};
 	\draw[line width=.06cm] (mog) -- (ino) node[pol] {12/11};
 	\draw[line width=.065cm] (ino) -- (byd) node[pol] {13/12};
 	\draw[line width=.04cm] (ino) -- (tor) node[pol] {9/8};
-	\draw[line width=.075cm] (byd) -- (tor) node[pol] {15};
+	\draw[line width=.11cm] (byd) -- (tor) node[pol] {15 (22)};
+	\draw[line width=.155cm] (tor) -- (tgl) node[pol] {31};
 
 	\node[st, above=of pws] (wag) {Wągrowiec};
 	\node[st, above=of wag] (gol) {Gołańcz};
@@ -86,18 +88,20 @@
 	\node[st, above left=of poz] (wro) {Wronki};
 	\node[st, left=of pil] (krz) {Krzyż};
 	\node[st, above=of krz] (sta) {Stargard};
-	\node[st, left=of krz] (gor) {Gorzów Wlkp.};
+	\node[st, node distance=6cm, left=of krz] (gor) {Gorzów Wlkp.};
+	\node[st, left=of gor] (kos) {Kostrzyn};
 
 	\draw[line width=.105cm] (poz) -- (wro) node[pol] {21/20};
 	\draw[line width=.085cm] (wro) -- (krz) node[pol] {17/16};
 	\draw[line width=.035cm] (krz) -- (sta) node[pol] {7};
 	\draw[line width=.05cm] (krz) -- (pil) node[pol] {10};
 	\draw[line width=.06cm] (krz) -- (gor) node[pol] {12};
+	\draw[line width=.06cm] (gor) -- (kos) node[pol] {14};
 
 	\node[st, below right=of poz] (sro) {Środa Wlkp.};
-	\node[st, below right=of sro] (jar) {Jarocin};
-	\node[st, below right=of jar] (ost) {Ostrów Wlkp.};
-	\node[st, below left=of jar] (kro) {Krotoszyn};
+	\node[st, node distance=4.2cm, below right=of sro] (jar) {Jarocin};
+	\node[st, node distance=5cm, below right=of jar] (ost) {Ostrów Wlkp.};
+	\node[st, node distance=5cm, right=of les] (kro) {Krotoszyn};
 	\node[st, below=of kro] (mil) {Milicz};
 	\node[st, below left=of ost] (odo) {Odolanów};
 	\node[st, below=of ost] (kep) {Kępno};
@@ -123,7 +127,7 @@
 	\draw[line width=.035cm] (les) -- (kro) node[pol] {7};
 	\draw[line width=.03cm] (kro) -- (ost) node[pol] {6};
 
-	\node[st, left=of cze] (gro) {Grodzisk Wlkp.};
+	\node[st, node distance=1.5cm, left=of cze] (gro) {Grodzisk Wlkp.};
 	\node[st, left=of gro] (wol) {Wolsztyn};
 
 	\draw[line width=.075cm] (wol) -- (gro) node[pol] {14/15};
@@ -141,6 +145,18 @@
 
 	\draw[line width=.025cm] (wol) -- (zba) node[pol] {5};
 	\draw[line width=.05cm] (les) -- (wol) node[pol] {10};
+
+	\draw[line width=.035cm] (zek) -- (gor) node[pol] {7};
+
+	\node[st, node distance=10cm, left=of les] (glo) {Głogów};
+	\draw[line width=.035cm] (glo) -- (les) node[pol] {7};
+
+	\node[st, node distance=2.3cm, below=of tgl] (wlo) {Włocławek};
+	\node[st, node distance=2.3cm, below=of wlo] (kal) {Kaliska Kujawskie};
+
+	\draw[line width=.04cm] (kut) -- (kal) node[pol] {8};
+	\draw[line width=.05cm] (kal) -- (wlo) node[pol] {10};
+	\draw[line width=.085cm] (wlo) -- (tgl) node[pol] {17};
 \end{tikzpicture}
 
 \end{document}
