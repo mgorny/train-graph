@@ -10,6 +10,7 @@
 			very thick,
 			draw=black,
 			inner sep=.2cm,
+			node distance=1.8cm,
 		},
 		pol/.style={
 			midway,
@@ -18,68 +19,34 @@
 		}
 	]
 
-	\node[st, ultra thick, font=\bfseries] (poz) {Poznań};
+	\node[st, ultra thick, font=\bfseries] (poz) {Poznań Główny};
 
-	\node[st, below=of poz] (lub) {Luboń k.\\Poznania};
+	\node[st, below=of poz] (lub) {Luboń k. Poznania};
 	\node[st, below=of lub] (cze) {Czempiń};
 	\node[st, below=of cze] (kos) {Kościan};
 	\node[st, below=of kos] (les) {Leszno};
 	\node[st, below=of les] (raw) {Rawicz};
-	\node[st, below=of raw] (wro) {Wrocław};
+	\node[st, below=of raw] (wro) {Wrocław Mikołajów};
 
-	\draw (lub) -- (poz) node[pol] {44/45};
-	\draw (cze) -- (lub) node[pol] {27};
-	\draw (kos) -- (cze) node[pol] {26};
-	\draw (les) -- (kos) node[pol] {23/22};
-	\draw (raw) -- (les) node[pol] {17/16};
-	\draw (wro) -- (raw) node[pol] {21/20};
+	\draw[line width=.22cm] (lub) -- (poz) node[pol] {44/45};
+	\draw[line width=.135cm] (cze) -- (lub) node[pol] {27};
+	\draw[line width=.13cm] (kos) -- (cze) node[pol] {26};
+	\draw[line width=.11cm] (les) -- (kos) node[pol] {23/22};
+	\draw[line width=.08cm] (raw) -- (les) node[pol] {17/16};
+	\draw[line width=.1cm] (wro) -- (raw) node[pol] {21/20};
 
 	\node[st, above=of poz] (obo) {Oborniki Wlkp.};
 	\node[st, above=of obo] (rog) {Rogoźno Wlkp.};
-	\node[st, above=of rog] (pil) {Piła};
+	\node[st, above=of rog] (pil) {Piła Główna};
 	\node[st, above=of pil] (szc) {Szczecinek};
 
-	\draw (poz) -- (obo) node[pol] {19};
-	\draw (obo) -- (rog) node[pol] {18};
-	\draw (rog) -- (pil) node[pol] {14};
-	\draw (pil) -- (szc) node[pol] {6};
+	\draw[line width=.095cm] (poz) -- (obo) node[pol] {19};
+	\draw[line width=.09cm] (obo) -- (rog) node[pol] {18};
+	\draw[line width=.07cm] (rog) -- (pil) node[pol] {14};
+	\draw[line width=.03cm] (pil) -- (szc) node[pol] {6};
 
 	\node[st, right=of poz] (pws) {Poznań Wschód};
-	\draw (poz) -- (pws) node[pol] {68};
-
-	\node[st, above right=of pws] (gni) {Gniezno};
-	\node[st, above=of gni] (mog) {Mogilno};
-	\node[st, above=of mog] (ino) {Inowrocław};
-	\node[st, above left=of ino] (byd) {Bydgoszcz};
-	\node[st, above right=of ino] (tor) {Toruń};
-
-	\draw (pws) -- (gni) node[pol] {25};
-	\draw (gni) -- (mog) node[pol] {13};
-	\draw (mog) -- (ino) node[pol] {12/11};
-	\draw (ino) -- (byd) node[pol] {13/12};
-	\draw (ino) -- (tor) node[pol] {9/8};
-	\draw (byd) -- (tor) node[pol] {15};
-
-	\node[st, above=of pws] (wag) {Wągrowiec};
-	\node[st, above=of wag] (gol) {Gołańcz};
-
-	\draw (pws) -- (wag) node[pol] {18/19};
-	\draw (wag) -- (gol) node[pol] {5};
-
-	\node[st, right=of pil] (wyr) {Wyrzysk Osiek};
-	\draw (pil) -- (wyr) node[pol] {10};
-	\draw (wyr) -- (byd) node[pol] {15};
-
-	\node[st, above left=of poz] (wro) {Wronki};
-	\node[st, above=of wro] (krz) {Krzyż};
-	\node[st, above=of krz] (sta) {Stargard};
-	\node[st, left=of krz] (gor) {Gorzów Wlkp.};
-
-	\draw (poz) -- (wro) node[pol] {21/20};
-	\draw (wro) -- (krz) node[pol] {17/16};
-	\draw (krz) -- (sta) node[pol] {7};
-	\draw (krz) -- (pil) node[pol] {10};
-	\draw (krz) -- (gor) node[pol] {12};
+	\draw[line width=.34cm] (poz) -- (pws) node[pol] {68};
 
 	\node[st, right=of pws] (wrz) {Września};
 	\node[st, right=of wrz] (kon) {Konin};
@@ -87,59 +54,93 @@
 	\node[st, right=of kol] (klo) {Kłodawa};
 	\node[st, right=of klo] (kut) {Kutno};
 
-	\draw (pws) -- (wrz) node[pol] {23};
-	\draw (wrz) -- (kon) node[pol] {19};
-	\draw (kon) -- (kol) node[pol] {13};
-	\draw (kol) -- (klo) node[pol] {8};
-	\draw (klo) -- (kut) node[pol] {4};
+	\draw[line width=.115cm] (pws) -- (wrz) node[pol] {23};
+	\draw[line width=.095cm] (wrz) -- (kon) node[pol] {19};
+	\draw[line width=.065cm] (kon) -- (kol) node[pol] {13};
+	\draw[line width=.04cm] (kol) -- (klo) node[pol] {8};
+	\draw[line width=.02cm] (klo) -- (kut) node[pol] {4};
+
+	\node[st, above=of wrz] (gni) {Gniezno};
+	\node[st, above right=of gni] (mog) {Mogilno};
+	\node[st, above=of mog] (ino) {Inowrocław};
+	\node[st, above left=of ino] (byd) {Bydgoszcz Główna};
+	\node[st, above right=of ino] (tor) {Toruń Kluczyki};
+
+	\draw[line width=.125cm] (pws) -- (gni) node[pol] {25};
+	\draw[line width=.065cm] (gni) -- (mog) node[pol] {13};
+	\draw[line width=.06cm] (mog) -- (ino) node[pol] {12/11};
+	\draw[line width=.065cm] (ino) -- (byd) node[pol] {13/12};
+	\draw[line width=.04cm] (ino) -- (tor) node[pol] {9/8};
+	\draw[line width=.075cm] (byd) -- (tor) node[pol] {15};
+
+	\node[st, above=of pws] (wag) {Wągrowiec};
+	\node[st, above=of wag] (gol) {Gołańcz};
+
+	\draw[line width=.095cm] (pws) -- (wag) node[pol] {18/19};
+	\draw[line width=.025cm] (wag) -- (gol) node[pol] {5};
+
+	\node[st, right=of pil] (wyr) {Wyrzysk Osiek};
+	\draw[line width=.05cm] (pil) -- (wyr) node[pol] {10};
+	\draw[line width=.075cm] (wyr) -- (byd) node[pol] {15};
+
+	\node[st, above left=of poz] (wro) {Wronki};
+	\node[st, left=of pil] (krz) {Krzyż};
+	\node[st, above=of krz] (sta) {Stargard};
+	\node[st, left=of krz] (gor) {Gorzów Wlkp.};
+
+	\draw[line width=.105cm] (poz) -- (wro) node[pol] {21/20};
+	\draw[line width=.085cm] (wro) -- (krz) node[pol] {17/16};
+	\draw[line width=.035cm] (krz) -- (sta) node[pol] {7};
+	\draw[line width=.05cm] (krz) -- (pil) node[pol] {10};
+	\draw[line width=.06cm] (krz) -- (gor) node[pol] {12};
 
 	\node[st, below right=of poz] (sro) {Środa Wlkp.};
-	\node[st, right=of sro] (jar) {Jarocin};
+	\node[st, below right=of sro] (jar) {Jarocin};
 	\node[st, below right=of jar] (ost) {Ostrów Wlkp.};
-	\node[st, below=of sro] (kro) {Krotoszyn};
+	\node[st, below left=of jar] (kro) {Krotoszyn};
 	\node[st, below=of kro] (mil) {Milicz};
 	\node[st, below left=of ost] (odo) {Odolanów};
 	\node[st, below=of ost] (kep) {Kępno};
 	\node[st, below=of kep] (klu) {Kluczbork};
 	\node[st, right=of ost] (kal) {Kalisz};
 
-	\draw (poz) -- (sro) node[pol] {24};
-	\draw (sro) -- (jar) node[pol] {21};
-	\draw (jar) -- (ost) node[pol] {17/16};
-	\draw (kep) -- (ost) node[pol] {9};
-	\draw (klu) -- (kep) node[pol] {4};
+	\draw[line width=.12cm] (poz) -- (sro) node[pol] {24};
+	\draw[line width=.105cm] (sro) -- (jar) node[pol] {21};
+	\draw[line width=.085cm] (jar) -- (ost) node[pol] {17/16};
+	\draw[line width=.045cm] (kep) -- (ost) node[pol] {9};
+	\draw[line width=.02cm] (klu) -- (kep) node[pol] {4};
 
-	\draw (kro) -- (jar) node[pol] {3/4};
-	\draw (mil) -- (kro) node[pol] {6};
+	\draw[line width=.02cm] (kro) -- (jar) node[pol] {3/4};
+	\draw[line width=.03cm] (mil) -- (kro) node[pol] {6};
 
-	\draw (ost) -- (kal) node[pol] {7/8};
+	\draw[line width=.04cm] (ost) -- (kal) node[pol] {7/8};
 
-	\draw (odo) -- (ost) node[pol] {9};
+	\draw[line width=.045cm] (odo) -- (ost) node[pol] {9};
 
-	\draw (jar) -- (wrz) node[pol] {7};
-	\draw (wrz) -- (gni) node[pol] {7};
+	\draw[line width=.035cm] (jar) -- (wrz) node[pol] {7};
+	\draw[line width=.035cm] (wrz) -- (gni) node[pol] {7};
 
-	\draw (les) -- (kro) node[pol] {7};
-	\draw (kro) -- (ost) node[pol] {6};
+	\draw[line width=.035cm] (les) -- (kro) node[pol] {7};
+	\draw[line width=.03cm] (kro) -- (ost) node[pol] {6};
 
 	\node[st, left=of cze] (gro) {Grodzisk Wlkp.};
 	\node[st, left=of gro] (wol) {Wolsztyn};
 
-	\draw (wol) -- (gro) node[pol] {14/15};
-	\draw (gro) -- (lub) node[pol] {17/18};
+	\draw[line width=.075cm] (wol) -- (gro) node[pol] {14/15};
+	\draw[line width=.09cm] (gro) -- (lub) node[pol] {17/18};
 
 	\node[st, left=of poz] (opa) {Opalenica};
 	\node[st, left=of opa] (zba) {Zbąszyń};
 	\node[st, left=of zba] (zek) {Zbaszynek};
 	\node[st, below left=of zek] (sul) {Sulechów};
 
-	\draw (sul) -- (zek) node[pol] {12};
-	\draw (zek) -- (zba) node[pol] {21};
-	\draw (zba) -- (opa) node[pol] {16};
-	\draw (opa) -- (poz) node[pol] {19};
+	\draw[line width=.06cm] (sul) -- (zek) node[pol] {12};
+	\draw[line width=.105cm] (zek) -- (zba) node[pol] {21};
+	\draw[line width=.08cm] (zba) -- (opa) node[pol] {16};
+	\draw[line width=.095cm] (opa) -- (poz) node[pol] {19};
 
-	\draw (wol) -- (zba) node[pol] {5};
-	\draw (les) -- (wol) node[pol] {10};
+	\draw[line width=.025cm] (wol) -- (zba) node[pol] {5};
+	\draw[line width=.05cm] (les) -- (wol) node[pol] {10};
 \end{tikzpicture}
 
 \end{document}
